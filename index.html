@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Chat App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-pane">
+            <div class="top-header">
+<!-- Add the following lines within the <div class="top-header"> in the left pane -->
+    <button class="new-chat-button"><i class="fas fa-plus"></i> New Chat</button>
+    <!-- Update the following lines within the <div class="top-header"> in the left pane -->
+<button class="hide-left-pane-button" onclick="hideLeftPane()"><i class="fas fa-bars"></i></button>
+<button class="show-sidebar-button" onclick="toggleLeftPane(true)" style="display: none;"><i class="fas fa-bars"></i></button>
+<button class="show-left-pane-button" onclick="toggleLeftPane(false)" style="display: none;"><i class="fas fa-bars"></i></button>
+
+    
+    
+            </div>
+            <div class="chat-list">           
+                
+                <div class="chat-item">John Doe</div>
+                <div class="chat-item">Alice Smith</div>
+                <div class="chat-item">Bob Johnson</div>
+                <!-- Dummy chat items -->
+            </div>
+            <div class="upgrade-section">
+                <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+                <div class="upgrade-text">Upgrade to Plus</div>
+                <div class="new-label">New</div>
+            </div>
+            <div class="profile-section">
+                <div class="account-icon"><i class="fas fa-user"></i></div>
+                <div class="profile-info">
+                    <div class="user-name">Harshada Patil</div>
+                    <div class="three-dots-icon"><i class="fas fa-ellipsis-v"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-pane">
+            <div class="center-logo">ChatGPT</div>
+            <div class="message-area">
+                <!-- Messages will be displayed here -->
+            </div>
+            <!-- Add the following lines within the <div class="bottom-input"> in the right pane -->
+<div class="four-boxes-section">
+    <div class="row">
+        <div class="single-box" id="box1">
+            <div class="box-content">
+                <div class="box-heading">Design a database schema</div>
+                <div class="box-description">for an online merch store</div>
+                <div class="send-icon1">&#x27A4;</div>
+            </div>
+        </div>
+        <div class="single-box" id="box2">
+            <div class="box-content">
+                <div class="box-heading">Help me debug</div>
+                <div class="box-description">a lined list problem</div>
+                <div class="send-icon2">&#x27A4;</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="single-box" id="box3">
+            <div class="box-content">
+                <div class="box-heading">Create a charter </div>
+                <div class="box-description">to start a film club </div>
+                <div class="send-icon3">&#x27A4;</div>
+            </div>
+        </div>
+        <div class="single-box" id="box4">
+            <div class="box-content">
+                <div class="box-heading">Plan a trip</div>
+                <div class="box-description">to explore the nightlife scene in Bangkok</div>
+                <div class="send-icon4">&#x27A4;</div>
+             </div>
+        </div>
+    </div>
+</div>
+            <div class="bottom-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+
+               <i class="fas fa-paper-plane send-icon" onclick="sendMessage()"></i>
+
+            </div>
+            <div class="floating-buttons">
+                <button class="floating-button thunder-button"><i class="fas fa-bolt"></i> GPT-3.5</button>
+<button class="floating-button stars-button"><i class="fas fa-star"></i> GPT-4 <i class="fas fa-lock"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
